@@ -1,0 +1,9 @@
+{
+"name": "Manak Buildings",
+"type": "Flat",
+"address": "Virar",
+"sorr": "Sell",
+"size":500,
+"price": 400000 
+
+}
