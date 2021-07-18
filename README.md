@@ -1,23 +1,38 @@
-Real Eastate App Backend containes node apllication for commection with react app and mongodb
+#Real Eastate Backend
+##(NODE ALLICATION)
 
-File Tree
-Backend
-    ->Frontend
-        ->RealEstate
-              {react-application}
-{backed api}
+###HOW TO RUN
+##Step 1
+download project
 
-Inside this backed folder there is a folder named Frontend whis is react app
+##Step 2
+install few dependenies
+npm install express
+npm install mongoose
+npm install nodemone
 
-this is node application used to connect with local mongoDB server
-host = http://localhost:8000/
-port = 8000
+##Step 3
+After Successfully installetion we can run our backend server
+npm start
 
-if you have node installed download this project run command "npm start"
-it will run the localserver at port 8000
+##Step 4
+Server will run on http://localhost:8000/
 
-after this you have to download the Frontend react application 
+#Details
+There are Three api
+##First 
+http://localhost:8000/
+This will send all Advertisements in JSON form
+
+##Second
+http://localhost:8000/create
+This will save an advertisement to Adds database
+
+##Third
+http://localhost:8000/add/:id
+This will send one Advertisement whoose id match with id from url
+
+#Now
+Download the Frontend react application 
 from this repository
-https://github.com/pksoftcore/realEstate/tree/main/backend/Frontend
-==or use== 
 https://github.com/pksoftcore/RealEstateFrontend
