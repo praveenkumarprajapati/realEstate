@@ -5,5 +5,4 @@
 "sorr": "Sell",
 "size":500,
 "price": 400000 
-
 }

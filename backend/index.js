@@ -3,8 +3,10 @@ const cors = require("cors")
 const mongoose = require("mongoose")
 const Adds = require("./models/Adds")
 
+const hosturl = "mongodb://localhost:27017/realestate"
 
-mongoose.connect("mongodb://localhost:27017/realestate", { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+
+mongoose.connect(hosturl, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log("Sucess")
 }).catch((err) => {
     console.log("Error")
@@ -29,7 +31,7 @@ app.get("/", (req, res) => {
     });
 });
 
-app.post("/newAdd", (req, res) => {
+app.post("/create", (req, res) => {
     const adds = new Adds(req.body);
     console.log("Request Body" + adds)
     adds.save().then((adds) => {
@@ -40,17 +42,27 @@ app.post("/newAdd", (req, res) => {
 });
 
 app.get("/add/:id", (req, res) => {
-    const id = req.params.id;
-    console.log(id)
-    Adds.findById({ _id: id }, (err, adds) => {
+
+    Adds.find((err, adds) => {
         if (err) {
-            res.send("Error")
+            console.log(err)
         }
         else {
-
             res.json(adds)
         }
     });
+    console.log("Add api called" + req.params.id)
+    // const id = req.params.id;
+    // console.log(id)
+    // Adds.findById({ _id: id }, (err, adds) => {
+    //     if (adds) {
+    //         console.log("We are sending this" + adds);
+    //         res.json(adds);
+    //     }
+    //     else {
+    //         console.log(err)
+    //     }
+    // });
 });
 
 const port = 8000;
