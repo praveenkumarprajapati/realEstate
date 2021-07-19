@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const advertisement = mongoose.Schema(
+const advertisementSchema = mongoose.Schema(
     {
         name: {
             type: String
@@ -31,4 +31,4 @@ const advertisement = mongoose.Schema(
         }
     }, { collection: "advertisement" })
 
-module.exports = mongoose.model("Adds", advertisement)
+module.exports = mongoose.model("Addvertisements", advertisementSchema)
