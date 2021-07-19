@@ -1,10 +1,10 @@
 # MERN-CRUD-App
 
-Note this is backend 
+Note: This is backend
 ### For frontend React app visit
 https://github.com/pksoftcore/RealEstateFrontend
 
-## Requirement
+## Requirements
 - [Node.js](https://nodejs.org/en/) 10+
 
 
