@@ -49,6 +49,24 @@ app.post("/create", (req, res) => {
     });
 });
 
+// @route POST /create
+// @desc create new advertisement
+app.delete("/:id", (req, res) => {
+    try {
+        Advertisements.findByIdAndRemove(req.params.id).then(res => {
+            res.send({ message: "Advertisement Deleted Sucessfully" })
+            console.log("Delete Called Succ")
+        }).catch(err => {
+            res.status(400).send({ error: err })
+            console.log("Delete Called Err")
+        })
+
+    }
+    catch (err) {
+        res.status(400).send({ error: err })
+    }
+});
+
 const port = 8000;
 app.listen(port, () => {
     console.log("Server Running")
