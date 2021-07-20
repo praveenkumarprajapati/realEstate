@@ -49,6 +49,24 @@ app.post("/create", (req, res) => {
     });
 });
 
+
+// @route PUT /updateById/:id
+// @desc create new advertisement
+app.put("/updateById/:id", async (req, res) => {
+    try {
+        await Advertisements.findByIdAndUpdate(req.params.id, req.body).then((addvertisement) => {
+            res.status(200).send(addvertisement)
+            console.log("Server Called")
+        }).catch((err) => {
+            res.status(404).send(err)
+            console.log("Server called with error")
+        })
+    }
+    catch (err) {
+        console.log(err)
+    }
+});
+
 // @route POST /create
 // @desc create new advertisement
 app.delete("/:id", (req, res) => {
