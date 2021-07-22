@@ -1,0 +1,13 @@
+.body-style {
+  background: #fff;
+  background-image: url("https://source.unsplash.com/1660x1160/?villa");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+.form-style {
+  max-width: 500px;
+  background: #2e120083;
+}
