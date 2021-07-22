@@ -76,10 +76,8 @@ app.put("/:id", async (req, res) => {
     try {
         await Advertisements.findByIdAndUpdate(req.params.id, req.body).then((addvertisement) => {
             res.status(200).send(addvertisement)
-            console.log("Server Called")
         }).catch((err) => {
             res.status(404).send(err)
-            console.log("Server called with error")
         })
     }
     catch (err) {
@@ -93,12 +91,9 @@ app.delete("/:id", (req, res) => {
     try {
         Advertisements.findByIdAndRemove(req.params.id).then(deleted => {
             res.send({ message: "Advertisement Deleted Sucessfully" })
-            console.log("Delete Called Succ")
         }).catch(err => {
             res.status(400).send({ error: err })
-            console.log("Delete Called Err", err)
         })
-
     }
     catch (err) {
         res.status(400).send({ error: err })
