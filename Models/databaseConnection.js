@@ -4,7 +4,7 @@ mongoose.Promise = global.Promise;
 
 const hosturl = "mongodb://localhost:27017/realestate"
 
-mongoose.connect(hosturl, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(hosturl, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
 mongoose.connection
     .once('open', () => {
