@@ -1,5 +1,7 @@
 # MERN-STACK-CRUD-App
 
+### Use Node version 18
+
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/) 10+
