@@ -5,26 +5,28 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./../components/Home/Home";
 import ShowAdvertisement from "./../components/ShowAdvertisement/ShowAdvertisement";
 import Navbar from "./../components/Navbar/Navbar";
-import EditAdvertisement from "./../components/EditAdvertisement/EditAdvertisement";
+import AdvertisementForm from "../components/AdvertisementForm";
 
 const Routes = () => {
   return (
     <Fragment>
       <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/createAdvertisement">
-          <EditAdvertisement isNew />
-        </Route>
-        <Route path="/showAdvertisement/:id">
-          <ShowAdvertisement />
-        </Route>
-        <Route path="/editAdvertisement/:id">
-          <EditAdvertisement />
-        </Route>
-      </Switch>
+      <div style={{ marginTop: '70px' }} >
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/createAdvertisement">
+            <AdvertisementForm isNew />
+          </Route>
+          <Route path="/showAdvertisement/:id">
+            <ShowAdvertisement />
+          </Route>
+          <Route path="/editAdvertisement/:id">
+            <AdvertisementForm />
+          </Route>
+        </Switch>
+      </div>
     </Fragment>
   );
 };

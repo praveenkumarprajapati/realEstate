@@ -1,34 +1,33 @@
 .welcome-back {
-  background: radial-gradient(rgb(1, 0, 77), #28f);
-  background-image: url("https://source.unsplash.com/1660x1160/?house");
+  background-image: url("../../assets/images/home-background.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-shadow: 5px 2px 5px rgb(29, 27, 29);
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .welcome-front {
-  box-shadow: 10px 10px 20px rgb(48, 43, 43);
-  background: rgba(2, 2, 2, 0.644);
+  /* box-shadow: 10px 10px 20px rgb(48, 43, 43); */
+  /* background: rgba(2, 2, 2, 0.644); */
   border-radius: 10px;
   transition: 0.5s ease;
   text-align: center;
 }
 
 .myButton {
-  padding: 15px 40px;
-  font-size: 25px;
-  border: 2px solid rgb(213, 196, 245);
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-right: 10px;
   outline: none;
   color: #fff;
   border-radius: 10px;
-  background: rgba(0, 0, 0, 0.486);
+  background: rgb(53, 49, 49);
   transition: 0.5s ease;
 }
 
 .myButton:hover {
-  font-size: 25px;
-  background: rgba(213, 196, 245, 0.74);
+  cursor: pointer;
+  background: rgb(0, 0, 0);
 }
